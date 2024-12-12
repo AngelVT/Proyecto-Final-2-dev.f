@@ -1,0 +1,43 @@
+:root {
+    --white: #f5f5f5;
+}
+
+@font-face {
+    font-family: "RW";
+    src: url("../font/rain-world-menu.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "RW";
+}
+
+html {
+    scroll-snap-type: y mandatory;
+    font-size: 62.5%;
+    background-color: var(--white);
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+}
+
+header {
+    position: fixed;
+}
+
+section {
+    height: 100dvh;
+    scroll-snap-align: center;
+}
+
+footer {
+    scroll-snap-align: center;
+}
