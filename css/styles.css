@@ -2,6 +2,7 @@
     --white: #f5f5f5;
     --accent: #FF00FF;
     --gray: #8d8d8d;
+    --gray-alpha: #8d8d8d86;
 }
 
 @font-face {
@@ -95,6 +96,9 @@ section {
     background-position: center;
     background-size: cover;
     color: var(--white);
+    box-shadow: 2px 0px 26px -2px rgba(0,0,0,0.36) inset;
+    -webkit-box-shadow: 2px 0px 26px -2px rgba(0,0,0,0.36) inset;
+    -moz-box-shadow: 2px 0px 26px -2px rgba(0,0,0,0.36) inset;
 }
 
 /* ! section 1  */
@@ -137,6 +141,10 @@ section {
 
 .features__preorder .feature > span {
     font-size: 5rem;
+}
+
+.features__preorder .feature:hover > span {
+    color: var(--accent);
 }
 
 .features__preorder .feature > p {
@@ -234,6 +242,94 @@ section {
 
 .section__2 {
     background-image: url(../img/background_2.webp);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    text-shadow: 2px 2px 4px var(--gray);
+}
+
+.section__2 h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 5rem;
+}
+
+.section__2 h2 > span {
+    color: var(--accent);
+}
+
+.section__2 p {
+    text-align: center;
+    width: 70%;
+    font-size: 2.5rem;
+}
+
+.section__2 p > strong {
+    color: var(--accent);
+}
+
+/* ! Characters  */
+.characters {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.character {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    position: relative;
+
+    height: 300px;
+    width: 300px;
+
+    border: 2px solid var(--white);
+    border-radius: 15px;
+
+    padding: 10px;
+    overflow: hidden;
+}
+
+.character img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.character .info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--gray-alpha);
+}
+
+.character .info p  {
+    font-size: 2rem;
+    margin: 10px 0;
+}
+
+.character .info p > span {
+    color: var(--accent);
+}
+
+.character:hover .info {
+    opacity: 1;
 }
 
 /* ! section 3  */
