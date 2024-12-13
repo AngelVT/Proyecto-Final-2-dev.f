@@ -21,6 +21,7 @@ html {
     scroll-snap-type: y mandatory;
     font-size: 62.5%;
     background-color: var(--white);
+    scrollbar-width: none;
 }
 
 body {
@@ -322,6 +323,11 @@ section {
 .character .info p  {
     font-size: 2rem;
     margin: 10px 0;
+    width: 100%;
+}
+
+.character .info .description  {
+    text-align: justify;
 }
 
 .character .info p > span {
