@@ -100,7 +100,7 @@ section {
 /* ! section 1  */
 
 .section__1 {
-    background-image: url(/img/background_1.webp);
+    background-image: url(../img/background_1.webp);
 
     display: flex;
     flex-direction: column;
@@ -233,25 +233,25 @@ section {
 /* ! section 2  */
 
 .section__2 {
-    background-image: url(/img/background_2.webp);
+    background-image: url(../img/background_2.webp);
 }
 
 /* ! section 3  */
 
 .section__3 {
-    background-image: url(/img/background_3.webp);
+    background-image: url(../img/background_3.webp);
 }
 
 /* ! section 4  */
 
 .section__4 {
-    background-image: url(/img/background_4.webp);
+    background-image: url(../img/background_4.webp);
 }
 
 /* ! section 5  */
 
 .section__5 {
-    background-image: url(/img/background_5.webp);
+    background-image: url(../img/background_5.webp);
 }
 
 /* ! Footer  */
