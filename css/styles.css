@@ -1,5 +1,7 @@
 :root {
     --white: #f5f5f5;
+    --accent: #FF00FF;
+    --gray: #8d8d8d;
 }
 
 @font-face {
@@ -30,14 +32,232 @@ ul {
 }
 
 header {
-    position: fixed;
+    position: sticky;
+    top: 0;
+    padding: 0 2%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2));
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navbar__elements {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+}
+
+.navbar__logo {
+    width: 10%;
+}
+
+.navbar__logo img{
+    width: 100%;
+}
+
+.navbar__icons {
+    width: 15%;
+    font-size: 3rem;
+    color: var(--white);
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar__links {
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    font-size: 2rem;
+    border-left: 1px solid var(--white);
+    text-transform: uppercase;
+}
+
+.navbar__links a, .navbar__icons li {
+    text-decoration: none;
+    color: var(--white);
+    transition: ease-in-out .2s;
+    cursor: pointer;
+}
+
+.navbar__links li:hover a, .navbar__icons li:hover {
+    color: var(--accent);
+    text-decoration: underline;
 }
 
 section {
     height: 100dvh;
     scroll-snap-align: center;
+    background-position: center;
+    background-size: cover;
+    color: var(--white);
 }
+
+/* ! section 1  */
+
+.section__1 {
+    background-image: url(/img/background_1.webp);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.section__1 img {
+    width: 40%;
+    justify-self: center;
+}
+
+/* ! Pre-order features  */
+
+.features__preorder {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    padding: 1%;
+}
+
+.features__preorder .feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    cursor: pointer;
+}
+
+.features__preorder .feature:hover {
+    transform: scale(1.1);
+    text-shadow: 2px 2px 4px var(--gray);
+}
+
+.features__preorder .feature > span {
+    font-size: 5rem;
+}
+
+.features__preorder .feature > p {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.features__preorder .feature:hover > p > span {
+    color: var(--accent);
+}
+
+.section__1 .button {
+    border: 2px var(--white) solid;
+    border-radius: 15px;
+    background-color: transparent;
+    font-size: 2.5rem;
+    padding: 5px;
+    width: 30%;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+    text-align: center;
+    text-decoration: none;
+    color: var(--white);
+}
+
+.section__1 .button:hover {
+    transform: scale(1.1);
+}
+
+/* ! Platforms and socials  */
+
+.socials__platforms {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 2%;
+}
+
+/* ! Platforms */
+
+.platforms {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.platforms > li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px var(--white) solid;
+    width: 30%;
+    padding: 5px;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.platforms > li:hover {
+    background: linear-gradient(to bottom, transparent, var(--accent));
+}
+
+.platforms > li > span {
+    font-size: 3rem;
+    margin-right: 6px;
+}
+
+.platforms > li > p > span {
+    font-size: 1.3rem;
+}
+
+.platforms > li > p {
+    font-size: 2rem;
+}
+
+/* ! Socials */
+
+.socials__platforms .socials {
+    width: 10%;
+    font-size: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.socials__platforms .socials > li {
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+}
+
+.socials__platforms .socials > li:hover {
+    color: var(--accent);
+    transform: scale(1.05);
+}
+
+/* ! section 2  */
+
+.section__2 {
+    background-image: url(/img/background_2.webp);
+}
+
+/* ! section 3  */
+
+.section__3 {
+    background-image: url(/img/background_3.webp);
+}
+
+/* ! section 4  */
+
+.section__4 {
+    background-image: url(/img/background_4.webp);
+}
+
+/* ! section 5  */
+
+.section__5 {
+    background-image: url(/img/background_5.webp);
+}
+
+/* ! Footer  */
 
 footer {
     scroll-snap-align: center;
+    background-color: #454545;
+    color: var(--white);
 }
